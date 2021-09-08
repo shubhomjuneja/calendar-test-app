@@ -15,7 +15,10 @@ const Dashboard = () => {
   const [selectedTime, setSelectedTime] = useState<string>('');
   const [startDate, setStartDate] = useState<Date>(new Date());
 
-  const handleChange = (date: Date) => setStartDate(date)
+  const handleChange = (date: Date) => {
+      setStartDate(date)
+      setSelectedTime('');
+  }
 
   const onSelectTime = (time: string) => setSelectedTime(time);
 
